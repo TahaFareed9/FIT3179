@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Blood Donations in Malaysia (2023)",
+    "width": 800,
+    "height": 400,
+    "background": "#bae4f4",
+    "layer": [
+        {
+            "data": {
+                "url": "ne_1.json",
+                "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+            },
+            "transform": [
+                {
+                    "lookup": "properties.name",
+                    "from": {
+                        "data": {
+                            "url": "blood_donations_per_1000_by_state_2023.csv"
+                        },
+                        "key": "state",
+                        "fields": ["donations_per_1000"]
+                    }
+                }
+            ],
+            "mark": {"type": "geoshape"},
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "test": "datum.donations_per_1000",
+                        "field": "donations_per_1000",
+                        "type": "quantitative",
+                        "scale": {"type": "log", "range": ["#fc5858", "#4a0303"]},
+                        "legend": {"title": "Transactions per 1000 People"}
+                    },
+                    "value": "white"
+                },
+                "tooltip": [
+                    {"field": "properties.name", "type": "nominal", "title": "State"},
+                    {"field": "donations_per_1000", "type": "quantitative", "title": "Number of Blood Donation Transactions per 1000 People"}
+                ]
+            },
+            "projection": {"type": "equalEarth"}
+        },
+        {
+            "data": {
+                "url": "ne_1.json",
+                "format": {"type": "topojson", "feature": "ne_110m_graticules_5"}
+            },
+            "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+            "projection": {"type": "mercator"}
+        }
+    ]
+}
