@@ -12,7 +12,7 @@
                 "min": 0,
                 "max": 103,
                 "step": 1,
-                "name": "Minimum Donations:  "
+                "name": "Maximum Donations:  "
             }
         }
     ],
