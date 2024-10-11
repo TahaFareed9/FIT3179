@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Small multiples of radial charts showing blood donations by blood type for each state.",
+    "title": "Johor",
+    "width": 250,
+    "height": 250,
+    "data": {
+        "url": "blood_donations_type.csv"
+    },
+    "transform": [
+        {
+            "filter": {
+                "field": "state",
+                "equal": "Johor"
+            }
+        }
+    ],
+    "layer": [
+        {
+            "mark": {"type": "arc", "innerRadius": 30, "stroke": "#ffff"}
+        },
+        {
+            "mark": {"type": "text", "radiusOffset": 10},
+            "encoding": {
+                "text": {"field": "blood_type", "type": "nominal"}
+            }
+        }
+    ],
+    "encoding": {
+        "theta": {
+            "field": "donations",
+            "type": "quantitative",
+            "stack": true
+        },
+        "radius": {
+            "field": "donations",
+            "type": "quantitative",
+            "scale": {"type": "sqrt", "zero": true, "range": [30, 100]}
+        },
+        "color": {
+            "field": "blood_type",
+            "type": "nominal",
+            "legend": null
+        },
+        "tooltip": [
+            {"field": "blood_type", "type": "nominal", "title": "Blood Type"},
+            {"field": "donations", "type": "quantitative", "title": "Donations"}
+        ]
+    }
+        
+}

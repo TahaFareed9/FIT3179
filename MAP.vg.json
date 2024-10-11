@@ -1,0 +1,77 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "params": [
+        {
+            "name": "Donations_Selection",
+            "value": 28,
+            "bind": {
+                "input": "range",
+                "min": 0,
+                "max": 28,
+                "step": 1,
+                "name": "Donations: "
+            }
+        },
+        {
+            "name": "Year_Selection",
+            "value": 2023,
+            "bind": {
+                "input": "range",
+                "min": 2018,
+                "max": 2023,
+                "step": 1,
+                "name": "Year:"
+            }
+          }
+    ],
+    "layer": [
+        {
+            "data": {
+                "url": "ne_3.json",
+                "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+            },
+            "transform": [
+                {
+                    "calculate": "datum.properties.name == 'Selangor' || datum.properties.name == 'W.P. Kuala Lumpur' || datum.properties.name == 'W.P. Putrajaya' ? 'Klang Valley' : datum.properties.name",
+                    "as": "region"
+                },
+                {
+                    "lookup": "region",
+                    "from": {
+                        "data": {
+                            "url": "blood_donations_map.csv"
+                        },
+                        "key": "state",
+                        "fields": ["donations_per_1000", "year"]
+                    }
+                },
+                {
+                    "calculate": "toNumber(datum.year)",
+                    "as": "year"
+                },
+                {"filter": "(datum.year == Year_Selection) && datum.donations_per_1000 <= Donations_Selection"}
+                
+            ],
+            "mark": {"type": "geoshape"},
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "test": "datum.donations_per_1000",
+                        "field": "donations_per_1000",
+                        "type": "quantitative",
+                        "scale": {"type": "threshold", "domain": [0, 10, 15, 20, 25], "range": ["#D3D3D3", "#ffcccc", "#ff9999", "#ff6666", "#cc0000", "#990000"]},
+                        "legend": {"title": ["Transactions", " per 1000 People"]}
+                    },
+                    "value": "#D3D3D3"
+                },
+                "tooltip": [
+                    {"field": "region", "type": "nominal", "title": "State"},
+                    {"field": "donations_per_1000", "type": "quantitative", "title": "Blood Donation Transactions per 1000 People"}
+                ]
+            },
+            "projection": {"type": "equirectangular"}
+        }
+    ]
+}

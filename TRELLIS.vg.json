@@ -1,0 +1,255 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "vconcat": [
+        {
+            "title": "Klang Valley",
+            "width": 800,
+            "height": 100,
+            "data": {
+                "url": "daily_blood_donations.csv"
+            },
+            "transform": [
+                {
+                    "filter": {
+                        "field": "state",
+                        "equal": "Klang Valley"
+                    }
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date",
+                    "type": "temporal",
+                    "title": "Time",
+                    "axis": {"grid": false}
+                },
+                "y": {
+                    "field": "donations",
+                    "type": "quantitative",
+                    "title": "Blood Donations",
+                    "scale": {"domain": [0, 2500]},
+                    "axis": {"grid": false}
+                },
+                "color": {
+                    "field": "state",
+                    "type": "nominal",
+                    "legend": null
+                },
+                "tooltip": [
+                    {"field": "state", "type": "nominal", "title": "State"},
+                    {"field": "date", "type": "temporal", "title": "Date"},
+                    {"field": "donations", "type": "quantitative", "title": "Donations"}
+                ]
+            }
+        },
+        {
+            "title": "Melaka",
+            "width": 800,
+            "height": 100,
+            "data": {
+                "url": "daily_blood_donations.csv"
+            },
+            "transform": [
+                {
+                    "filter": {
+                        "field": "state",
+                        "equal": "Melaka"
+                    }
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date",
+                    "type": "temporal",
+                    "title": "Time",
+                    "axis": {"grid": false}
+                },
+                "y": {
+                    "field": "donations",
+                    "type": "quantitative",
+                    "title": "Blood Donations",
+                    "scale": {"domain": [0, 2500]},
+                    "axis": {"grid": false}
+                },
+                "color": {
+                    "field": "state",
+                    "type": "nominal",
+                    "legend": null
+                },
+                "tooltip": [
+                    {"field": "state", "type": "nominal", "title": "State"},
+                    {"field": "date", "type": "temporal", "title": "Date"},
+                    {"field": "donations", "type": "quantitative", "title": "Donations"}
+                ]
+            }
+        },
+        {
+            "title": "Pulau Pinang",
+            "width": 800,
+            "height": 100,
+            "data": {
+                "url": "daily_blood_donations.csv"
+            },
+            "transform": [
+                {
+                    "filter": {
+                        "field": "state",
+                        "equal": "Pulau Pinang"
+                    }
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date",
+                    "type": "temporal",
+                    "title": "Time",
+                    "axis": {"grid": false}
+                },
+                "y": {
+                    "field": "donations",
+                    "type": "quantitative",
+                    "title": "Blood Donations",
+                    "scale": {"domain": [0, 2500]},
+                    "axis": {"grid": false}
+                },
+                "color": {
+                    "field": "state",
+                    "type": "nominal",
+                    "legend": null
+                },
+                "tooltip": [
+                    {"field": "state", "type": "nominal", "title": "State"},
+                    {"field": "date", "type": "temporal", "title": "Date"},
+                    {"field": "donations", "type": "quantitative", "title": "Donations"}
+                ]
+            }
+        },
+        {
+            "title": "Kedah",
+            "width": 800,
+            "height": 100,
+            "layer": [
+                {
+                    "data": {
+                        "url": "daily_blood_donations.csv"
+                    },
+                    "transform": [
+                        {
+                            "filter": {
+                                "field": "state",
+                                "equal": "Kedah"
+                            }
+                        }
+                    ],
+                    "mark": "area",
+                    "encoding": {
+                        "x": {
+                            "field": "date",
+                            "type": "temporal",
+                            "title": "Time",
+                            "axis": {"grid": false}
+                        },
+                        "y": {
+                            "field": "donations",
+                            "type": "quantitative",
+                            "title": "Blood Donations",
+                            "scale": {"domain": [0, 2500]},
+                            "axis": {"grid": false}
+                        },
+                        "color": {
+                            "field": "state",
+                            "type": "nominal",
+                            "legend": null
+                        },
+                        "tooltip": [
+                            {"field": "state", "type": "nominal", "title": "State"},
+                            {"field": "date", "type": "temporal", "title": "Date"},
+                            {"field": "donations", "type": "quantitative", "title": "Donations"}
+                        ]
+                    }
+                },
+                {
+                    "data": {"values": [{}]},
+                    "mark": {
+                        "type": "rule", 
+                        "strokeDash": [2, 2], 
+                        "size": 2, 
+                        "color": "red"
+                    },
+                    "encoding": {
+                        "x": {"datum": {"year": 2019, "month": "May"}
+                    }
+
+                    }
+                },
+                {
+                    "data": {
+                        "values": [
+                            {
+                                "donations": 1700
+                            }
+                        ]
+                    },
+                    "mark": {
+                        "type": "text",
+                        "fontSize": 8,
+                        "fontWeight": "bold",
+                        "align": "left"
+                    },
+                    "encoding": {
+                        "text": {"value": ["Kedah witnessed a significant", "drop in blood donations in May", "2019, and it remained at this", "rate for the upcoming years."]},
+                        "x": {"datum": {"year": 2018, "month": "may"}},
+                        "y": {"field": "donations", "type": "quantitative", "title": ""}
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Sarawak",
+            "width": 800,
+            "height": 100,
+            "data": {
+                "url": "daily_blood_donations.csv"
+            },
+            "transform": [
+                {
+                    "filter": {
+                        "field": "state",
+                        "equal": "Sarawak"
+                    }
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date",
+                    "type": "temporal",
+                    "title": "Time",
+                    "axis": {"grid": false}
+                },
+                "y": {
+                    "field": "donations",
+                    "type": "quantitative",
+                    "title": "Blood Donations",
+                    "scale": {"domain": [0, 2500]},
+                    "axis": {"grid": false}
+                },
+                "color": {
+                    "field": "state",
+                    "type": "nominal",
+                    "legend": null
+                },
+                "tooltip": [
+                    {"field": "state", "type": "nominal", "title": "State"},
+                    {"field": "date", "type": "temporal", "title": "Date"},
+                    {"field": "donations", "type": "quantitative", "title": "Donations"}
+                ]
+            }
+        }
+    ]
+    
+}

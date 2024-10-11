@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="Assignment2.js"></script>
+
+    <title>FIT3179 Assignemnt 2</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center all items */
+        }
+
+        #map, #trellis {
+            margin-bottom: 40px; /* Spacing between sections */
+        }
+
+        .radial-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for multiple rows */
+            justify-content: center; /* Center the items */
+            width: 100%; /* Use full width */
+            max-width: 800px; /* Optional: Limit the maximum width */
+        }
+
+        .radial-item {
+            flex: 1 1 calc(33% - 20px); /* Each item takes up 1/3 of the width minus margin */
+            margin: 5px; /* Margin around each item */
+            max-width: 250px; /* Optional: Limit the maximum width of each radial chart */
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Blood Donations in Malaysia</h1>
+
+    <h2>Blood Donations by State</h2>
+
+    <div id="map"></div>
+
+    <p>Blood donation data for the states Perlis and Labuan is not available</p>
+
+    <h2>Blood Donations in Selected States (2018-2023)</h2>
+
+    <div id="trellis"></div>
+
+    <h2>Blood Donation Distribution by Blood Type (2023)</h2>
+
+    <div class="radial-container">
+        <div id="radialklang" class="radial-item"></div>
+        <div id="radialmelaka" class="radial-item"></div>
+        <div id="radialpulau" class="radial-item"></div>
+        <div id="radialkedah" class="radial-item"></div>
+        <div id="radialsarawak" class="radial-item"></div>
+        <div id="radialjohor" class="radial-item"></div>
+    </div>
+    
+</body>
+
+</html>
