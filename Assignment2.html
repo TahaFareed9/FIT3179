@@ -31,12 +31,54 @@
             justify-content: center; /* Center the items */
             width: 100%; /* Use full width */
             max-width: 800px; /* Optional: Limit the maximum width */
+            margin-bottom: 40px;
         }
 
         .radial-item {
             flex: 1 1 calc(33% - 20px); /* Each item takes up 1/3 of the width minus margin */
             margin: 5px; /* Margin around each item */
             max-width: 250px; /* Optional: Limit the maximum width of each radial chart */
+        }
+
+        h1 {
+            font-family: 'Georgia', serif; 
+            font-weight: 1000;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-family: 'Georgia', serif; 
+            font-weight: 700;
+            max-width: 500px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        h3 {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+            font-size: 16;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .highlight {
+            color: #cc0000;
+        }
+
+        .highlight2 {
+            font-weight: bold;
+        }
+
+        .foot {
+            text-align: center;
         }
 
     </style>
@@ -46,17 +88,50 @@
 <body>
     <h1>Blood Donations in Malaysia</h1>
 
-    <h2>Blood Donations by State</h2>
+    <p>
+        Blood donations are a critical lifeline for healthcare systems, 
+        ensuring the availability of a constant supply of essential blood 
+        components across Malaysia. Patients of numerous kinds of medical 
+        conidtions are in need of blood transfusions every day, and blood 
+        donations is one way they can receive the help the need.
+    </p>
+
+    <h2>Blood Donations by State (2023)</h2>
+
+    <P>
+        There exists some large regional disparites in blood donation 
+        levels, which may suggest the need for targeted efforts to raise 
+        awareness about the importance of donating blood in under-represented 
+        states such as Kelantan. This would increase the blood donaton levels 
+        in these states, and therefore creating a more stable supply of blood 
+        components.
+    </P>
 
     <div id="map"></div>
 
-    <p>Blood donation data for the states Perlis and Labuan is not available</p>
-
     <h2>Blood Donations in Selected States (2018-2023)</h2>
+
+    <p>
+        Blood donation trends overall remained stable over the last six years, 
+        with only a slight drop during the start of the COVID-19 pandemic. 
+        There is only one expeption to this trend, that being the state Kedah, 
+        which saw more fluctuation in blood donation levels, which could indicate 
+        the existence of an underlying issue that is worth investigating into.
+    </p>
 
     <div id="trellis"></div>
 
-    <h2>Blood Donation Distribution by Blood Type (2023)</h2>
+    <h2>Blood Donation Distribution by Blood Type in Selected States (2023)</h2>
+
+    <p>
+        The blood types that have the highest demand are O- and O+ due to O- 
+        blood type being a universal donor, and most blood types being able 
+        to receive blood transfusions of O+ type. Meanwhile, the blood types 
+        with the least demand are AB+ as it is a universal recipient, and AB- 
+        as it is able to receive many types of blood. This is clearly reflected 
+        in charts' blood donations type distribution, and it shows that most 
+        states are able to meet this demand.
+    </p>
 
     <div class="radial-container">
         <div id="radialklang" class="radial-item"></div>
@@ -66,7 +141,25 @@
         <div id="radialsarawak" class="radial-item"></div>
         <div id="radialjohor" class="radial-item"></div>
     </div>
-    
+
+    <h3>
+        Donating <span class="highlight">blood</span> saves lives.
+    </h3>
+
+    <p class="foot">
+        <span class="highlight2">Author:</span> Taha Waheed Fareed Fareed
+        <br>
+        <span class="highlight2">ID:</span> 32813473
+        <br>
+        <span class="highlight2">Lab:</span> Friday 02:00 PM
+        <br>
+        <span class="highlight2">Tutor:</span> Dr Grace
+        <br>
+        <span class="highlight2">Date:</span> 15-10-2024
+        <br>
+        <span class="highlight2">Source:</span> https://data.gov.my/
+    </p>
+
 </body>
 
 </html>

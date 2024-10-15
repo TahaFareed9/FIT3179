@@ -46,6 +46,24 @@
             {"field": "blood_type", "type": "nominal", "title": "Blood Type"},
             {"field": "donations", "type": "quantitative", "title": "Donations"}
         ]
+    },
+    "config": {
+        "title": {
+            "font": "Arial"
+        },
+        "axis": {
+            "labelFont": "Arial",
+            "titleFont": "Arial"
+        },
+        "legend": {
+            "labelFont": "Arial",
+            "titleFont": "Arial"
+        },
+        "params": [
+            {
+                "name": "Arial"
+            }
+        ]
     }
         
 }

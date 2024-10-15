@@ -1,49 +1,49 @@
 state,blood_type,donations
-Johor,a,10621
-Johor,ab,2296
-Johor,b,11664
-Johor,o,19124
-Kedah,a,5420
-Kedah,ab,1345
-Kedah,b,6044
-Kedah,o,8754
-Kelantan,a,4424
-Kelantan,ab,1109
-Kelantan,b,4544
-Kelantan,o,6639
-Melaka,a,7280
-Melaka,ab,1755
-Melaka,b,7532
-Melaka,o,11877
-Negeri Sembilan,a,4052
-Negeri Sembilan,ab,857
-Negeri Sembilan,b,4378
-Negeri Sembilan,o,7130
-Pahang,a,5801
-Pahang,ab,1342
-Pahang,b,6395
-Pahang,o,9263
-Perak,a,11565
-Perak,ab,2790
-Perak,b,12962
-Perak,o,19600
-Pulau Pinang,a,10235
-Pulau Pinang,ab,2597
-Pulau Pinang,b,11319
-Pulau Pinang,o,17482
-Sabah,a,9049
-Sabah,ab,1996
-Sabah,b,9715
-Sabah,o,19064
-Sarawak,a,9984
-Sarawak,ab,2499
-Sarawak,b,11922
-Sarawak,o,17188
-Terengganu,a,4688
-Terengganu,ab,1398
-Terengganu,b,5379
-Terengganu,o,7892
-Klang Valley,a,59167
-Klang Valley,ab,12070
-Klang Valley,b,64298
-Klang Valley,o,100868
+Johor,A,10621
+Johor,Ab,2296
+Johor,B,11664
+Johor,O,19124
+Kedah,A,5420
+Kedah,AB,1345
+Kedah,B,6044
+Kedah,O,8754
+Kelantan,A,4424
+Kelantan,AB,1109
+Kelantan,B,4544
+Kelantan,O,6639
+Melaka,A,7280
+Melaka,AB,1755
+Melaka,B,7532
+Melaka,O,11877
+Negeri Sembilan,A,4052
+Negeri Sembilan,AB,857
+Negeri Sembilan,B,4378
+Negeri Sembilan,O,7130
+Pahang,A,5801
+Pahang,AB,1342
+Pahang,B,6395
+Pahang,O,9263
+Perak,A,11565
+Perak,AB,2790
+Perak,B,12962
+Perak,O,19600
+Pulau Pinang,A,10235
+Pulau Pinang,AB,2597
+Pulau Pinang,B,11319
+Pulau Pinang,O,17482
+Sabah,A,9049
+Sabah,AB,1996
+Sabah,B,9715
+Sabah,O,19064
+Sarawak,A,9984
+Sarawak,AB,2499
+Sarawak,B,11922
+Sarawak,O,17188
+Terengganu,A,4688
+Terengganu,AB,1398
+Terengganu,B,5379
+Terengganu,O,7892
+Klang Valley,A,59167
+Klang Valley,AB,12070
+Klang Valley,B,64298
+Klang Valley,O,100868

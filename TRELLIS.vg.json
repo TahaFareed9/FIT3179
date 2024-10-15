@@ -29,7 +29,6 @@
                     "field": "donations",
                     "type": "quantitative",
                     "title": "Blood Donations",
-                    "scale": {"domain": [0, 2500]},
                     "axis": {"grid": false}
                 },
                 "color": {
@@ -71,7 +70,6 @@
                     "field": "donations",
                     "type": "quantitative",
                     "title": "Blood Donations",
-                    "scale": {"domain": [0, 2500]},
                     "axis": {"grid": false}
                 },
                 "color": {
@@ -113,7 +111,6 @@
                     "field": "donations",
                     "type": "quantitative",
                     "title": "Blood Donations",
-                    "scale": {"domain": [0, 2500]},
                     "axis": {"grid": false}
                 },
                 "color": {
@@ -157,7 +154,6 @@
                             "field": "donations",
                             "type": "quantitative",
                             "title": "Blood Donations",
-                            "scale": {"domain": [0, 2500]},
                             "axis": {"grid": false}
                         },
                         "color": {
@@ -190,7 +186,7 @@
                     "data": {
                         "values": [
                             {
-                                "donations": 1700
+                                "donations": 600
                             }
                         ]
                     },
@@ -202,7 +198,7 @@
                     },
                     "encoding": {
                         "text": {"value": ["Kedah witnessed a significant", "drop in blood donations in May", "2019, and it remained at this", "rate for the upcoming years."]},
-                        "x": {"datum": {"year": 2018, "month": "may"}},
+                        "x": {"datum": {"year": 2019, "month": "august"}},
                         "y": {"field": "donations", "type": "quantitative", "title": ""}
                     }
                 }
@@ -235,7 +231,6 @@
                     "field": "donations",
                     "type": "quantitative",
                     "title": "Blood Donations",
-                    "scale": {"domain": [0, 2500]},
                     "axis": {"grid": false}
                 },
                 "color": {
@@ -250,6 +245,25 @@
                 ]
             }
         }
-    ]
+    ],
+    "config": {
+        "title": {
+            "font": "Arial"
+        },
+        "axis": {
+            "labelFont": "Arial",
+            "titleFont": "Arial"
+        },
+        "legend": {
+            "labelFont": "Arial",
+            "titleFont": "Arial"
+        },
+        "params": [
+            {
+                "name": "Arial"
+            }
+        ]
+    }
+      
     
 }

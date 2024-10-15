@@ -11,20 +11,9 @@
                 "min": 0,
                 "max": 28,
                 "step": 1,
-                "name": "Donations: "
+                "name": "Number of Donations: "
             }
-        },
-        {
-            "name": "Year_Selection",
-            "value": 2023,
-            "bind": {
-                "input": "range",
-                "min": 2018,
-                "max": 2023,
-                "step": 1,
-                "name": "Year:"
-            }
-          }
+        }
     ],
     "layer": [
         {
@@ -51,7 +40,7 @@
                     "calculate": "toNumber(datum.year)",
                     "as": "year"
                 },
-                {"filter": "(datum.year == Year_Selection) && datum.donations_per_1000 <= Donations_Selection"}
+                {"filter": "datum.donations_per_1000 <= Donations_Selection"}
                 
             ],
             "mark": {"type": "geoshape"},
@@ -73,5 +62,16 @@
             },
             "projection": {"type": "equirectangular"}
         }
-    ]
+    ],
+    "config": {
+        "legend": {
+            "labelFont": "Arial",
+            "titleFont": "Arial"
+        },
+        "params": [
+            {
+                "name": "Arial"
+            }
+        ]
+    }
 }
